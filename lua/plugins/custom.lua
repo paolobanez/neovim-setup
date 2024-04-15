@@ -26,9 +26,20 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      auto_install = true,
+    dependencies = {
+      -- Add nvim-ts-autotag
+      { "windwp/nvim-ts-autotag" },
     },
+    event = { "BufReadPre" },
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "typescript",
+      })
+      return vim.tbl_deep_extend("force", opts, {
+        auto_install = true,
+        autotag = { enable = true },
+      })
+    end,
   },
   {
     "L3MON4D3/LuaSnip",
