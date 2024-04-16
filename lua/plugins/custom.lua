@@ -19,9 +19,20 @@ return {
   },
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    opts = {
+      styles = {
+        bold = false,
+        italic = false,
+        transparency = true,
+      },
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "moonfly",
+      colorscheme = "rose-pine",
     },
   },
   {
