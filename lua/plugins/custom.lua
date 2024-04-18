@@ -25,7 +25,7 @@ return {
       styles = {
         bold = false,
         italic = false,
-        transparency = true,
+        transparency = false,
       },
     },
   },
@@ -57,5 +57,13 @@ return {
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
     end,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    enabled = false,
+  },
+  {
+    "echasnovski/mini.indentscope",
+    enabled = false,
   },
 }
