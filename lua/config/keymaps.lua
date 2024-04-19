@@ -3,13 +3,5 @@
 -- Add any additional keymaps here
 local keymap = vim.keymap
 
--- Select All
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set({ "n", "x", "i", "v", "s" }, "<C-z>", "<nop>")
 
--- Resize window
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
-
-keymap.set("n", "<C-z>", "<nop>")
